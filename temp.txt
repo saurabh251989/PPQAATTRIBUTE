@@ -1,0 +1,38 @@
+3509:<1>,<1.1>,<1.1.1>,<1.1.2>,<1.1.3>,<1.2>,<1.3>
+
+This MTS is dependent on the behavior<2c> of SDD_OPSW-CI-2652 and <2> of SDD_OPSW-CI-2651
+
+Test Objectives:
+1) If internal variable Run_Put is FALSE(Behavior <2> of 2651 and Behavior <2> of 2651) 
+1.1) If conditions are invalid (i.e DB entry DML_PWRINTGTTRANSLE200MS is FALSE ) and (i.e DB entry DML_MANUALRESETTEST is FALSE or DB entry DML_MANUALRESET is TRUE).(Behavior <2c> of SDD_OPSW-CI-2652)
+1.1.1)If DB entry DML_SECVOLTAGEMONRESETTEST is TRUE and DB entry DML_PUT_FINISHED is TRUE, read using GlobalData DMA_Database , then: following (Behavior <1> of 3509 and Behavior <1.1> of 3509)
+&nbsp;&nbsp;&nbsp; - write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(),(Behavior <1.1.1> of 3509)
+&nbsp;&nbsp;&nbsp; - write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),(Behavior <1.1.2> of 3509)
+&nbsp;&nbsp;&nbsp; - write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and(Behavior <1.1.3> of 3509)
+&nbsp;&nbsp;&nbsp; - call function DOR_Reset_Power_Interrupt_Time_Detector().(Behavior <1.2> of 3509)
+&nbsp;&nbsp;&nbsp; - call function AST_Resume_Safety_Tests().(Behavior <1.3> of 3509)
+
+1.1.2)If DB entry DML_SECVOLTAGEMONRESETTEST is TRUE and DB entry DML_MANUALRESET is FALSE, read using GlobalData DMA_Database , then: (Behavior <1> of 3509 and Behavior <1.1> of 3509)
+&nbsp;&nbsp;&nbsp; - call function DOR_Reset_Power_Interrupt_Time_Detector().(Behavior <1.2> of 3509)
+&nbsp;&nbsp;&nbsp; - call function AST_Resume_Safety_Tests().(Behavior <1.3> of 3509)
+
+Note: This MTS is common for both FCP_A and FCP_B mode.
+
+Template Used: Coupling Standard Test Procedure
+
+Coupling Tables: Refer table “FCP_AB_STH_Run_Startup_Test_6” for inputs and outputs.
+
+PreCondition/Setup: CallOfFunction(STH_Initialise()) in all test .
+
+Input Stimulation: 
+1) Provide the input using standard input methods as specified in table “FCP_AB_STH_Run_Startup_Test_6”.
+2) Inputs for database entries are exercised for ranges or data type as mentioned in data dictionary.
+3) internal variable Run_Put, DB entries DML_PWRINTGTTRANSLE200MS, DML_MANUALRESETTEST and DML_MANUALRESET are FALSE in all the test cases
+Transfer Action: CallOfFunction(STH_Run_Startup())
+
+Output Verification: 
+1) Outputs Index and Src are verified using standard output method “ValueWritten2DB” as specified in table “FCP_AB_STH_Run_Startup_Test_6”.
+2) Function calls DOR_Reset_Power_Interrupt_Time_Detector, AST_Resume_Safety_Tests are verified using standard output method “StubCalled” as specified in table “FCP_AB_STH_Run_Startup_Test_6”.
+3) Outputs Index and Value are verified using standard output method “StubCalled(DME_Set_With_NVM(Index, Value))” as specified in table “FCP_AB_STH_Run_Startup_Test_6”.
+4) Verify following function call in all test cases ValueWritten2DB(DML_PWRUPCOMPLETED, FALSE).
+ 

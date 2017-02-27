@@ -1,0 +1,2060 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<title>/A350_SFCC/System/VV/PD1000015141_MTS_FL_A350_SFCC_P1</title></head>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#EE0000" ALINK="#808080" VLINK="#808080">
+<!-- 03 February 2017 krishnamurthyg -->
+<table border><tr bgcolor="#FFC0CB">
+<th width=159 align=Left>PUID</th>
+<th width=106 align=Left>Req_Mother</th>
+<th width=778 align=Left>Module Test Specification of Field Loadable SW - Level A Software (from S3.2.1 onwards)</th>
+<th width=160 align=Left>Val_Remark</th>
+<th width=160 align=Left>Req_Comment</th>
+<th width=160 align=Left>VV_Verification_Result</th>
+<th width=160 align=Left>VV_Verification_Justification</th>
+<th width=160 align=Left>VV_Verification_Procedure_Name</th>
+<th width=160 align=Left>VV_Verification_Procedure_Version</th>
+<th width=160 align=Left>Req_PR_Change_History</th>
+<th width=160 align=Left>Tested_Code_Label</th>
+<th width=160 align=Left>Tested_Baseline</th>
+<th width=160 align=Left>Val_Means</th>
+<th width=160 align=Left>Val_Reference</th>
+<th width=160 align=Left>Req_Status</th>
+<th width=230 align=Left>VV_Verification_Procedure_Dev_Status</th>
+<th nowrap> Links </th>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X12716933"> 
+</a><b>3.4.1.10   Module STH_Startup_Handler</b><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X12716934"> 
+</a><b>3.4.1.10.1  STH_Initialise </b><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><b>[MTS_OPSW_P1-IVVP-4739]</b></td>
+<td>SDD_OPSW-CI-1113</td>
+<td><a name="X12716937"> 
+</a>1113:&#60;2&#62;<br><br><b>Test Objective:</b><br>1) This MTS verifies that the DB entry DML_PWRUPCOMPLETED is set to FALSE using DMA_Set() function. (Behavior &#60;2&#62;)<br><br>Note: This MTS is common for both FCP_A and FCP_B mode.<br><br><b>Template Used:</b> Coupling Standard Test Procedure<br><br><b>Transfer Action: </b>CallOfFunction(STH_Initialise())<br><br><b>Output Verification: </b><br>Output is verified by calling standard output method ValueWritten2DB as follows: <br>ValueWritten2DB(DML_PWRUPCOMPLETED,FALSE). (Test objective 1)<br>
+</td>
+<td>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002444 [KP]: Specification Revalidation OK<br><br>1816PR002444 [KP]: Script Revalidation OK</td>
+<td><br></td>
+<td>Passed</td>
+<td><br></td>
+<td>opsw\source\os_service\fcp_ab\sth_startup_handler.ptu</td>
+<td>7</td>
+<td>1816PR002428;1816PR002444</td>
+<td>OPSW_DEVELOP_5_25</td>
+<td>PD1000006058_SDD_OPSW_A350_SFCC current 10.3</td>
+<td>Review</td>
+<td>Checklist CL_Val_MT_Spec (SPEG);Checklist CL_Val_MT_Script (SPEG)</td>
+<td>Accepted</td>
+<td>Integrated</td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X12716935"> 
+</a><b>3.4.1.10.2  STH_Run_Startup</b><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><b>[MTS_OPSW_P1-IVVP-4740]</b></td>
+<td>SDD_OPSW-CI-1113;SDD_OPSW-CI-2651;SDD_OPSW-CI-2652;SDD_OPSW-CI-1114;SDD_OPSW-CI-2653;SDD_OPSW-CI-3509</td>
+<td><a name="X12716938"> 
+</a>1113:&#60;1&#62;;<br>2651:&#60;2&#62;;<br>2652:&#60;2a&#62;,&#60;2c&#62;;<br>1114:&#60;3&#62;,&#60;a&#62;;<br>2653;<br>3509:&#60;2&#62;<br><br><b>Test Objectives:</b><br>This MTS verifies the actions in case manual reset as follows:<br>1) If internal variable Run_Put is FALSE  then perform the following (Behavior &#60;2&#62; of 2651 and Behavior &#60;1&#62; of 1113) <br> <br>1.1) If DB entry DML_PWRINTGTTRANSLE200MS is TRUE read using GlobalData DMA_Database , then: (Behavior &#60;2a&#62; of 2652)<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_COUP_COUP to 1 using DME_Set_With_NVM(),<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and<br>&nbsp;&nbsp;&nbsp;&#9;- call function DOR_Reset_Power_Interrupt_Time_Detector().<br><br>1.2) If conditions are invalid (i.e DB entry DML_PWRINTGTTRANSLE200MS is FALSE ) and  (i.e DB entry DML_MANUALRESETTEST is FALSE and DB entry DML_MANUALRESET is TRUE) and If DB entry DML_ACONGNDVAL is TRUE read using GlobalData DMA_Database , then: (Behavior &#60;2c&#62; of 2652 and (Behavior &#60;3&#62; of 1114)<br>&nbsp;&nbsp;&nbsp;&#9;- call function PUC_Delayed_Determine_Opmode(),<br>&nbsp;&nbsp;&nbsp;&#9;- call function PUC_Delayed_Failure_Reactions(),<br><br>1.2.1) If DB entry DML_ MANUALRESET is TRUE perform the following: (Behavior &#60;a&#62; of 1114)<br>      1.2.1.1) DML_ACONGND = TRUE AND DML_MANUALRESETTEST = FALSE then <br>
+<DIV style="margin-left: 36px">     - write DB entry DML_PUT_FINISHED to FALSE using DME_Set_With_NVM(), <br>     - set internal variable Run_Put to TRUE, and<br>     - write DB entry DML_COUP_COUP to 6 using DME_Set_With_NVM().<br>1.2.1.2) DML_ACONGND = TRUE AND DML_MANUALRESETTEST = TRUE then<br>      - write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(),<br>      - write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>      - write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database and call function DOR_Reset_Power_Interrupt_Time_Detector().<br>1.2.1.3) DML_ACONGND = FALSE then<br>      - write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(), <br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_COUP_COUP to 5 using DME_Set_With_NVM(), <br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database and<br>&nbsp;&nbsp;&nbsp;&#9;- call function DOR_Reset_Power_Interrupt_Time_Detector().<br>
+</DIV>2) If DB entry DML_SECVOLTAGEMONRESETTEST is FALSE then perform the objective 1 even though DML_PUT_FINISHED  is TRUE(Behavior &#60;2&#62; of 3509)<br><br>Note: <br>1) This MTS is common for both FCP_A and FCP_B mode.<br>2)  Initialization of variable &#34;Run_Put&#34; to False is verified implicitly.<br><br><b>Template Used:</b> Coupling Standard Test Procedure<br><br><b>Coupling Tables:</b> Refer table &#8220;FCP_AB_STH_Run_Startup_Test_1&#8221; for inputs and outputs.<br><br><b>PreCondition/Setup:</b> CallOfFunction(STH_Initialise()) in all test .<br><br><b>Input Stimulation:</b><br>1) Provide the input using standard input methods as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_1&#8221;.<br>2) Inputs for database entries are exercised for ranges or data type as mentioned in data dictionary.<br>3) DB entry DML_SECVOLTAGEMONRESETTEST is FALSE and DML_PUT_FINISHED is TRUE in all the test cases.<br><br><b>Transfer Action: </b>CallOfFunction(STH_Run_Startup())<br><br><b>Output Verification: </b><br>1) Outputs Index and Src are verified using standard output method &#8220;ValueWritten2DB&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_1&#8221;.<br>2) Function calls DOR_Reset_Power_Interrupt_Time_Detector, PUC_Delayed_Determine_Opmode and PUC_Delayed_Failure_Reactions are verified using standard output method &#8220;StubCalled&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_1&#8221;.<br>3) Outputs Index and Value are verified using standard output method &#8220;StubCalled(DME_Set_With_NVM(Index, Value))&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_1&#8221;.<br>4) Verify following function call in all test cases ValueWritten2DB(DML_PWRUPCOMPLETED, FALSE) <br><br>
+</td>
+<td>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002444 [KP]: Specification Revalidation OK<br><br>1816PR002444 [KP]: Script Revalidation OK</td>
+<td><br></td>
+<td>Passed</td>
+<td><br></td>
+<td>opsw\source\os_service\fcp_ab\sth_startup_handler.ptu</td>
+<td>7</td>
+<td>1816PR002428;1816PR002444</td>
+<td>OPSW_DEVELOP_5_25</td>
+<td>PD1000006058_SDD_OPSW_A350_SFCC current 10.3</td>
+<td>Review</td>
+<td>Checklist CL_Val_MT_Spec (SPEG);Checklist CL_Val_MT_Script (SPEG)</td>
+<td>Accepted</td>
+<td>Integrated</td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13858067"> 
+</a><table border = 1 cellPadding = 0 cellSpacing = 0>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858069"> 
+</a>Typ<br>
+</td>
+<td colSpan=100 valign="top"><a name="X13858070"> 
+</a>Name<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858071"> 
+</a>Method/TestCase<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858072"> 
+</a>1<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858073"> 
+</a>2<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858074"> 
+</a>3<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858075"> 
+</a>4<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858076"> 
+</a>5<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858078"> 
+</a>Test Objectives<br>
+</td>
+<td colSpan=100 valign="top"><a name="X13858079"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858080"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858081"> 
+</a>1,1.1,2<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858082"> 
+</a>1,1.1,2<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858083"> 
+</a>1,1.2,1.2.1,1.2.1.1,2<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858084"> 
+</a>1,1.2,1.2.1,1.2.1.2,2<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858085"> 
+</a>1,1.2,1.2.1,1.2.1.3,2<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858087"> 
+</a>Test Case <br>Description<br>
+</td>
+<td colSpan=100 valign="top"><a name="X13858088"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858089"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858090"> 
+</a>Value from DB entry <br>DML_PWRINTGTTRANSLE200MS = TRUE,<br>DML_OPSW_CYCLE_COUNTER = 0xFFFFFFFF<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858091"> 
+</a>Value from DB entry DML_OPSW_CYCLE_COUNTER = 0x0<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858092"> 
+</a>DML_ACONGND = TRUE<br>AND<br>DML_MANUALRESETTEST = FALSE<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858093"> 
+</a>DML_ACONGND = TRUE<br>AND<br>DML_MANUALRESETTEST = TRUE<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858094"> 
+</a>DML_ACONGND = FALSE<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858096"> 
+</a>Input<br>
+</td>
+<td colSpan=100 valign="top"><a name="X13858097"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858098"> 
+</a>GlobalData(DMA_Database[Index].Data) = Value<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858099"> 
+</a>DML_PWRINTGTTRANSLE200MS = TRUE<br><br>DML_OPSW_CYCLE_COUNTER = 0xFFFFFFFF<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858100"> 
+</a>DML_PWRINTGTTRANSLE200MS= TRUE<br><br>DML_OPSW_CYCLE_COUNTER  = 0x0<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858101"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = TRUE <br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858102"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = TRUE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL  = TRUE<br><br>DML_MANUALRESET = TRUE<br><br>DML_OPSW_CYCLE_COUNTER  = 0x8<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858103"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = FALSE<br><br>DML_ACONGNDVAL  = TRUE<br><br>DML_MANUALRESET = TRUE<br><br> DML_OPSW_CYCLE_COUNTER  = 0x0<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858105"> 
+</a>Input<br>
+</td>
+<td colSpan=100 valign="top"><a name="X13858106"> 
+</a>Stop_PUT<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858107"> 
+</a>[Value@Address(Stop_PUT,1),StubReturn(PUT_Handle(Stop_PUT))]<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858108"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858109"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858110"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858111"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858112"> 
+</a>NA<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858114"> 
+</a>Output<br>
+</td>
+<td colSpan=100 valign="top"><a name="X13858115"> 
+</a>Index,Src<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858116"> 
+</a>ValueWritten2DB(Index,Src)<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858117"> 
+</a>DML_PWRUPCOMPLETED, TRUE <br><br>DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0xFFFFFFFF<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858118"> 
+</a>DML_PWRUPCOMPLETED, TRUE <br><br>DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x0 <br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858119"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858120"> 
+</a>DML_PWRUPCOMPLETED, TRUE<br><br>DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x8<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858121"> 
+</a>DML_PWRUPCOMPLETED, TRUE<br><br>DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x0<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858123"> 
+</a>Output<br>
+</td>
+<td colSpan=100 valign="top"><a name="X13858124"> 
+</a>Yes/No<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858125"> 
+</a>StubCalled(DOR_Reset_Power_Interrupt_Time_Detector()),<br><br>StubCalled(PUC_Delayed_Determine_Opmode()),<br><br>StubCalled(PUC_Delayed_Failure_Reactions())<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858126"> 
+</a>Yes,<br>No,<br>No<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858127"> 
+</a>Yes,<br>No,<br>No<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858128"> 
+</a>No<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858129"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858130"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858132"> 
+</a>Output<br>
+</td>
+<td colSpan=100 valign="top"><a name="X13858133"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858134"> 
+</a>StubCalled(DME_Set_With_NVM(Index, Value))<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858135"> 
+</a>DML_COUP_COUP, 1 <br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858136"> 
+</a>DML_COUP_COUP, 1 <br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858137"> 
+</a>DML_PUT_FINISHED, FALSE<br><br>DML_COUP_COUP, 6 <br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858138"> 
+</a>DML_PUT_FINISHED, TRUE<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858139"> 
+</a>DML_PUT_FINISHED, TRUE <br><br>DML_COUP_COUP, 5 <br>
+</td>
+</tr>
+</table>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X12724806"> 
+</a>FCP_AB_STH_Run_Startup_Test_1<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><b>[MTS_OPSW_P1-IVVP-5515]</b></td>
+<td>SDD_OPSW-CI-1113;SDD_OPSW-CI-2651;SDD_OPSW-CI-2652;SDD_OPSW-CI-1114;SDD_OPSW-CI-2654;SDD_OPSW-CI-3509</td>
+<td><a name="X13320318"> 
+</a>1113:&#60;1&#62;;<br>2651:&#60;2&#62;;<br>2652:&#60;2c&#62;;<br>1114:&#60;3&#62;,&#60;b&#62;;<br>2654;<br>3509:&#60;2&#62;<br><br><b>Test Objectives:</b><br>This MTS verifies the actions in case HW reset as follows:<br><br>1) If internal variable Run_Put is FALSE then perform the following (Behavior &#60;2&#62; of 2651 and Behavior &#60;1&#62; of 1113)<br><br>2) If conditions are invalid (i.e DB entry DML_PWRINTGTTRANSLE200MS is FALSE) and  (i.e DB entry DML_MANUALRESETTEST is FALSE) and If DB entry DML_ACONGNDVAL is TRUE read using GlobalData DMA_Database , then(Behavior &#60;2c&#62; of 2652 and (Behavior &#60;3&#62; of 1114)<br>&nbsp;&nbsp;&nbsp;&#9;- call function PUC_Delayed_Determine_Opmode(),<br>&nbsp;&nbsp;&nbsp;&#9;- call function PUC_Delayed_Failure_Reactions(),<br><br>2.1) If  DB entry DML_HWRESET is TRUE and DML_MANUALRESET is FALSE read using GlobalData DMA_Database , then perform any of the following: : (Behavior &#60;b&#62; of 1114  and behaviors of 2654)<br><br>2.1.1) DML_ACONGND = TRUE AND DML_PUT_FINISHED = FALSE AND DML_SMSOFTWARERESET = TRUE then,<br>
+<DIV style="margin-left: 36px">- write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(),<br>- write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and<br>- call function DOR_Reset_Power_Interrupt_Time_Detector().<br><br>
+</DIV>2.1.2) DML_ACONGND = TRUE AND DML_PUT_FINISHED = FALSE AND  DML_SMSOFTWARERESET = FALSE then,<br>
+<DIV style="margin-left: 36px">- write DB entry DML_COUP_COUP to 8 using DME_Set_With_NVM(), and<br>- set internal variable Run_Put to TRUE.<br><br>
+</DIV>2.1.3) DML_ACONGND = TRUE AND DML_PUT_FINISHED = TRUE then,<br>            - write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(), <br>            - write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and<br>&nbsp;&nbsp;&nbsp;&#9;- call function DOR_Reset_Power_Interrupt_Time_Detector()<br><br>&nbsp;&nbsp;&nbsp;&#9;2.1.3.1) If DB entry DML_SMSOFTWARERESET is FALSE or all of the following entries DML_AST_RUNNING, DML_MST_RUNNING and DML_TESTSYSTEM_RUNNING are FALSE read using  GlobalData DMA_Database , then,<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_COUP_COUP to 7 using DME_Set_With_NVM().<br><br>2.1.4) DML_ACONGND = FALSE then,<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_COUP_COUP to 7 using DME_Set_With_NVM(),<br>            - write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM()<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and<br>
+<DIV style="margin-left: 36px">&nbsp;&nbsp;&nbsp;&#9;- call function DOR_Reset_Power_Interrupt_Time_Detector().<br>
+</DIV>3) If DB entry DML_SECVOLTAGEMONRESETTEST is FALSE then perform the objectives 1 and 2(Behavior &#60;2&#62; of 3509)<br><br>Note: This MTS is common for both FCP_A and FCP_B mode.<br><br><b>Template Used:</b> Coupling Standard Test Procedure<br><br><b>Coupling Tables:</b> Refer table &#8220;FCP_AB_STH_Run_Startup_Test_2a and FCP_AB_STH_Run_Startup_Test_2b&#8221; for inputs and outputs.<br><br><b>PreCondition/Setup:</b> CallOfFunction(STH_Initialise()) in all test .<br><br><b>Input Stimulation: </b><br>1) Provide the input using standard input methods as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_2a and FCP_AB_STH_Run_Startup_Test_2b&#8221;.<br>2) Inputs for database entries are exercised for ranges or data type as mentioned in data dictionary.<br>3) DB entry DML_SECVOLTAGEMONRESETTEST is FALSE in all the test cases.<br><br><b>Transfer Action: </b>CallOfFunction(STH_Run_Startup())<br><br><b>Output Verification: </b><br>1) Outputs Index and Src are verified using standard output method &#8220;ValueWritten2DB&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_2a and FCP_AB_STH_Run_Startup_Test_2b&#8221;.<br>2) Function calls DOR_Reset_Power_Interrupt_Time_Detector, PUC_Delayed_Determine_Opmode and PUC_Delayed_Failure_Reactions are verified using standard output method &#8220;StubCalled&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_2a and FCP_AB_STH_Run_Startup_Test_2b&#8221;.<br>3) Outputs Index and Value are verified using standard output method &#8220;StubCalled(DME_Set_With_NVM(Index, Value))&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_2a and FCP_AB_STH_Run_Startup_Test_2b&#8221;.<br>4) Verify following function call in all test cases ValueWritten2DB(DML_PWRUPCOMPLETED, FALSE).<br><br>
+</td>
+<td>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002444 [KP]: Specification Revalidation OK<br><br>1816PR002444 [KP]: Script Revalidation OK</td>
+<td><br></td>
+<td>Passed</td>
+<td><br></td>
+<td>opsw\source\os_service\fcp_ab\sth_startup_handler.ptu</td>
+<td>7</td>
+<td>1816PR002428;1816PR002444</td>
+<td>OPSW_DEVELOP_5_25</td>
+<td>PD1000006058_SDD_OPSW_A350_SFCC current 10.3</td>
+<td>Review</td>
+<td>Checklist CL_Val_MT_Spec (SPEG);Checklist CL_Val_MT_Script (SPEG)</td>
+<td>Accepted</td>
+<td>Integrated</td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13858140"> 
+</a><table border = 1 cellPadding = 0 cellSpacing = 0>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858142"> 
+</a>Typ<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858143"> 
+</a>Name<br>
+</td>
+<td colSpan=370 valign="top"><a name="X13858144"> 
+</a>Method/TestCase<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858145"> 
+</a>1<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858146"> 
+</a>2<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858147"> 
+</a>3<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858148"> 
+</a>4<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858150"> 
+</a>Test Objectives<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858151"> 
+</a>NA<br>
+</td>
+<td colSpan=370 valign="top"><a name="X13858152"> 
+</a>NA<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858153"> 
+</a>1,2,2.1,2.1.1,3<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858154"> 
+</a>1,2,2.1,2.1.2,3<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858155"> 
+</a>1,2,2.1,2.1.3,2.1.3.1,3<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858156"> 
+</a>1,2,2.1,2.1.3,2.1.3.1,3<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858158"> 
+</a>Test Case <br>Description<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858159"> 
+</a>NA<br>
+</td>
+<td colSpan=370 valign="top"><a name="X13858160"> 
+</a>NA<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858161"> 
+</a>DML_ACONGND = TRUE<br>AND<br>DML_PUT_FINISHED = FALSE<br>AND<br>DML_SMSOFTWARERESET = TRUE<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858162"> 
+</a>DML_ACONGND = TRUE<br>AND<br>DML_PUT_FINISHED = FALSE<br>AND<br>DML_SMSOFTWARERESET = FALSE<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858163"> 
+</a>DML_ACONGND = TRUE AND DML_PUT_FINISHED = TRUE<br>DML_SMSOFTWARERESET  = FALSE<br>DML_AST_RUNNING = TRUE<br>DML_MST_RUNNING = TRUE<br>DML_TESTSYSTEM_RUNNING = TRUE<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858164"> 
+</a>DML_ACONGND = TRUE AND DML_PUT_FINISHED = TRUE<br>DML_SMSOFTWARERESET  = TRUE<br>DML_AST_RUNNING = FALSE<br>DML_MST_RUNNING = FALSE<br>DML_TESTSYSTEM_RUNNING = FALSE<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858166"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858167"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=370 valign="top"><a name="X13858168"> 
+</a>GlobalData(DMA_Database[Index].Data) = Value<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858169"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET = TRUE<br><br>DML_PUT_FINISHED = FALSE<br><br>DML_SMSOFTWARERESET  = TRUE<br><br>DML_OPSW_CYCLE_COUNTER  = 0x22<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858170"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET = TRUE<br><br>DML_PUT_FINISHED = FALSE<br><br>DML_SMSOFTWARERESET = FALSE<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858171"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST= FALSE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL  = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET = TRUE<br><br>DML_PUT_FINISHED = TRUE<br><br>DML_SMSOFTWARERESET = FALSE<br><br>DML_AST_RUNNING = TRUE<br><br>DML_MST_RUNNING = TRUE<br><br>DML_TESTSYSTEM_RUNNING = TRUE<br><br>DML_OPSW_CYCLE_COUNTER = 0x33<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858172"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET = TRUE<br><br>DML_PUT_FINISHED = TRUE<br><br>DML_SMSOFTWARERESET = TRUE<br><br>DML_AST_RUNNING = FALSE<br><br>DML_MST_RUNNING = FALSE<br><br>DML_TESTSYSTEM_RUNNING = FALSE<br><br>DML_OPSW_CYCLE_COUNTER = 0x44<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858182"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858183"> 
+</a>Index,Src<br>
+</td>
+<td colSpan=370 valign="top"><a name="X13858184"> 
+</a>StubNum =&#62; ValueWritten2DB(Index,Src)<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858185"> 
+</a>1=&#62;(DML_PWRUPCOMPLETED, TRUE) <br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x22)<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858186"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858187"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE)<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x33)<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858188"> 
+</a>1=&#62;(DML_PWRUPCOMPLETED, TRUE) <br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x44)<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858190"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858191"> 
+</a>Yes/No<br>
+</td>
+<td colSpan=370 valign="top"><a name="X13858192"> 
+</a>StubCalled(DOR_Reset_Power_Interrupt_Time_Detector()),<br><br>StubCalled(PUC_Delayed_Determine_Opmode()),<br><br>StubCalled(PUC_Delayed_Failure_Reactions())<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858193"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858194"> 
+</a>No,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858195"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858196"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858198"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858199"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=370 valign="top"><a name="X13858200"> 
+</a>StubNum =&#62; StubCalled(DME_Set_With_NVM(Index, Value))<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858201"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858202"> 
+</a>1=&#62; ( DML_COUP_COUP, 8 )<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858203"> 
+</a>1=&#62; ( DML_COUP_COUP, 7 )<br><br>2=&#62; ( DML_PUT_FINISHED,  TRUE )<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858204"> 
+</a>1=&#62; ( DML_COUP_COUP, 7 )<br><br>2=&#62; ( DML_PUT_FINISHED,  TRUE )<br>
+</td>
+</tr>
+</table>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13320322"> 
+</a>FCP_AB_STH_Run_Startup_Test_2a<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13858205"> 
+</a><table border = 1 cellPadding = 0 cellSpacing = 0>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858207"> 
+</a>Typ<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858208"> 
+</a>Name<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858209"> 
+</a>Method/TestCase<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858210"> 
+</a>5<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858211"> 
+</a>6<br>
+</td>
+<td colSpan=320 valign="top"><a name="X13858212"> 
+</a>7<br>
+</td>
+<td colSpan=300 valign="top"><a name="X13858213"> 
+</a>8<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858215"> 
+</a>Test Objectives<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858216"> 
+</a>NA<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858217"> 
+</a>NA<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858218"> 
+</a>1,2,2.1,2.1.3,2.1.3.1,3<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858219"> 
+</a>1,2,2.1,2.1.3,2.1.3.1,3<br>
+</td>
+<td colSpan=320 valign="top"><a name="X13858220"> 
+</a>1,2,2.1,2.1.3,2.1.3.1,3<br>
+</td>
+<td colSpan=300 valign="top"><a name="X13858221"> 
+</a>1,2,2.1,2.1.4,3<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858223"> 
+</a>Test Case <br>Description<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858224"> 
+</a>NA<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858225"> 
+</a>NA<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858226"> 
+</a>DML_ACONGND = TRUE AND DML_PUT_FINISHED = TRUE<br>DML_SMSOFTWARERESET  = TRUE<br>DML_AST_RUNNING = TRUE<br>DML_MST_RUNNING = FALSE<br>DML_TESTSYSTEM_RUNNING = FALSE<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858227"> 
+</a>DML_ACONGND = TRUE AND DML_PUT_FINISHED = TRUE<br>DML_SMSOFTWARERESET  = TRUE<br>DML_AST_RUNNING = FALSE <br>DML_MST_RUNNING = TRUE<br>DML_TESTSYSTEM_RUNNING = FALSE<br>
+</td>
+<td colSpan=320 valign="top"><a name="X13858228"> 
+</a>DML_ACONGND = TRUE AND DML_PUT_FINISHED = TRUE<br>DML_SMSOFTWARERESET  = TRUE<br>DML_AST_RUNNING = FALSE <br>DML_MST_RUNNING = FALSE<br>DML_TESTSYSTEM_RUNNING = TRUE<br>
+</td>
+<td colSpan=300 valign="top"><a name="X13858229"> 
+</a>DML_ACONGND = FALSE<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858231"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858232"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858233"> 
+</a>StubNum =&#62; GlobalData(DMA_Database[Index].Data) = Value<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858234"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET = TRUE<br><br>DML_PUT_FINISHED  = TRUE<br><br>DML_SMSOFTWARERESET  = TRUE<br><br>DML_AST_RUNNING  = TRUE<br><br>DML_MST_RUNNING =FALSE<br><br>DML_TESTSYSTEM_RUNNING=FALSE<br><br>DML_OPSW_CYCLE_COUNTER = 0x44<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858235"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND  = TRUE<br><br>DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET  = TRUE<br><br>DML_PUT_FINISHED = TRUE<br><br>DML_SMSOFTWARERESET  = TRUE<br><br>DML_AST_RUNNING  = FALSE<br><br>DML_MST_RUNNING = TRUE<br><br>DML_TESTSYSTEM_RUNNING=FALSE<br><br>DML_OPSW_CYCLE_COUNTER = 0x55<br>
+</td>
+<td colSpan=320 valign="top"><a name="X13858236"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND  = TRUE<br><br>(DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET  = TRUE<br><br>DML_PUT_FINISHED  = TRUE<br><br>DML_SMSOFTWARERESET  = TRUE<br><br>DML_AST_RUNNING = FALSE<br><br>DML_MST_RUNNING = FALSE<br><br>DML_TESTSYSTEM_RUNNING  = TRUE<br><br>DML_OPSW_CYCLE_COUNTER = 0x66<br>
+</td>
+<td colSpan=300 valign="top"><a name="X13858237"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>(DML_ACONGND  = FALSE<br><br>DML_ACONGNDVAL  = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET  = TRUE<br><br>DML_OPSW_CYCLE_COUNTER  = 0x66<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858247"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858248"> 
+</a>Index,Src<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858249"> 
+</a>StubNum =&#62; ValueWritten2DB(Index,Src)<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858250"> 
+</a>1=&#62;(DML_PWRUPCOMPLETED, TRUE) <br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x44)<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858251"> 
+</a>1=&#62;(DML_PWRUPCOMPLETED, TRUE) <br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x55)<br>
+</td>
+<td colSpan=320 valign="top"><a name="X13858252"> 
+</a>1=&#62;(DML_PWRUPCOMPLETED, TRUE) <br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x66)<br>
+</td>
+<td colSpan=300 valign="top"><a name="X13858253"> 
+</a>1=&#62;(DML_PWRUPCOMPLETED, TRUE) <br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x66)<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858255"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858256"> 
+</a>Yes/No<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858257"> 
+</a>StubCalled(DOR_Reset_Power_Interrupt_Time_Detector()),<br><br>StubCalled(PUC_Delayed_Determine_Opmode()),<br><br>StubCalled(PUC_Delayed_Failure_Reactions())<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858258"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858259"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=320 valign="top"><a name="X13858260"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=300 valign="top"><a name="X13858261"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858263"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858264"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858265"> 
+</a>StubNum =&#62; StubCalled(DME_Set_With_NVM(Index, Value))<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858266"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=310 valign="top"><a name="X13858267"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=320 valign="top"><a name="X13858268"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=300 valign="top"><a name="X13858269"> 
+</a>1=&#62; (DML_COUP_COUP, 7 )<br>2=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+</tr>
+</table>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13320324"> 
+</a>FCP_AB_STH_Run_Startup_Test_2b<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><b>[MTS_OPSW_P1-IVVP-5516]</b></td>
+<td>SDD_OPSW-CI-1113;SDD_OPSW-CI-2651;SDD_OPSW-CI-2652;SDD_OPSW-CI-1114;SDD_OPSW-CI-2655;SDD_OPSW-CI-3509</td>
+<td><a name="X13320319"> 
+</a>1113:&#60;1&#62;;<br>2651:&#60;2&#62;;<br>2652:&#60;2c&#62;;<br>1114:&#60;3&#62;,&#60;c&#62;;<br>2655;<br>3509:&#60;2&#62;<br><br><b>Test Objectives:</b><br>This MTS verifies the actions in case of normal switching-on as follows:<br><br>1) If internal variable Run_Put is FALSE then perform the following ( Behavior &#60;2&#62; of 2651 and Behavior &#60;1&#62; of 1113)<br><br>2) If conditions are invalid (i.e DB entry DML_PWRINTGTTRANSLE200MS is FALSE) and  (i.e DB entry DML_MANUALRESETTEST is FALSE) and If DB entry DML_ACONGNDVAL is TRUE read using GlobalData DMA_Database , then: (Behavior &#60;2c&#62; of 2652 and (Behavior &#60;3&#62; of 1114)<br>&nbsp;&nbsp;&nbsp;&#9;- call function PUC_Delayed_Determine_Opmode(),<br>&nbsp;&nbsp;&nbsp;&#9;- call function PUC_Delayed_Failure_Reactions(),<br><br>2.1) If DB entry DML_PWRINT5S is TRUE and DML_MANUALRESET is FALSE and DML_HWRESET is FALSE read using GlobalData DMA_Database , then perform any of the following: (Behavior &#60;c&#62; of 1114)<br><br>2.1.1) DML_ACONGND = TRUE then,<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_COUP_COUP to 4 using DME_Set_With_NVM(), and<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PUT_FINISHED to FALSE using DME_Set_With_NVM(), and<br>&nbsp;&nbsp;&nbsp;&#9;- set internal variable Run_Put to TRUE.<br>2.1.2) DML_ACONGND = FALSE then,<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_COUP_COUP to 3 using DME_Set_With_NVM(),<br>            - write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(),<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and<br>
+<DIV style="margin-left: 36px">&nbsp;&nbsp;&nbsp;&#9;- call function DOR_Reset_Power_Interrupt_Time_Detector().<br>
+</DIV>3) If DB entry DML_SECVOLTAGEMONRESETTEST is FALSE then perform the objectives 1 even though DML_PUT_FINISHED  is TRUE(Behavior &#60;2&#62; of 3509)<br><br>Note: This MTS is common for both FCP_A and FCP_B mode.<br><br><b>Template Used:</b> Coupling Standard Test Procedure<br><br><b>Coupling Tables:</b> Refer table &#8220;FCP_AB_STH_Run_Startup_Test_3&#8221; for inputs and outputs.<br><br><b>PreCondition/Setup:</b> CallOfFunction(STH_Initialise()) in all test .<br><br><b>Input Stimulation: </b><br>1) Provide the input using standard input methods as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_3&#8221;.<br>2) Inputs for database entries are exercised for ranges or data type as mentioned in data dictionary.<br>3) DB entry DML_SECVOLTAGEMONRESETTEST is FALSE and DML_PUT_FINISHED is TRUE in all the test cases.<br><br><b>Transfer Action: </b>CallOfFunction(STH_Run_Startup())<br><br><b>Output Verification: </b><br>1) Outputs Index and Src are verified using standard output method &#8220;ValueWritten2DB&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_3&#8221;.<br>2) Function calls DOR_Reset_Power_Interrupt_Time_Detector, PUC_Delayed_Determine_Opmode and PUC_Delayed_Failure_Reactions are verified using standard output method &#8220;StubCalled&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_3&#8221;.<br>3) Outputs Index and Value are verified using standard output method &#8220;StubCalled(DME_Set_With_NVM(Index, Value))&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_3&#8221;.<br>4) Verify following function call in all test cases ValueWritten2DB(DML_PWRUPCOMPLETED, FALSE).<br>
+</td>
+<td>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002444 [KP]: Specification Revalidation OK<br><br>1816PR002444 [KP]: Script Revalidation OK</td>
+<td><br></td>
+<td>Passed</td>
+<td><br></td>
+<td>opsw\source\os_service\fcp_ab\sth_startup_handler.ptu</td>
+<td>7</td>
+<td>1816PR002428;1816PR002444</td>
+<td>OPSW_DEVELOP_5_25</td>
+<td>PD1000006058_SDD_OPSW_A350_SFCC current 10.3</td>
+<td>Review</td>
+<td>Checklist CL_Val_MT_Spec (SPEG);Checklist CL_Val_MT_Script (SPEG)</td>
+<td>Accepted</td>
+<td>Integrated</td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13858270"> 
+</a><table border = 1 cellPadding = 0 cellSpacing = 0>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858272"> 
+</a>Typ<br>
+</td>
+<td colSpan=90 valign="top"><a name="X13858273"> 
+</a>Name<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858274"> 
+</a>Method/TestCase<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858275"> 
+</a>1<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858276"> 
+</a>2<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858278"> 
+</a>Test Objectives<br>
+</td>
+<td colSpan=90 valign="top"><a name="X13858279"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858280"> 
+</a>NA<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858281"> 
+</a>1,2,2.1,2.1.1,3<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858282"> 
+</a>1,2,2.1,2.1.2,3<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858284"> 
+</a>Test Case <br>Description<br>
+</td>
+<td colSpan=90 valign="top"><a name="X13858285"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858286"> 
+</a>NA<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858287"> 
+</a>DML_ACONGND = TRUE<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858288"> 
+</a>DML_ACONGND = FALSE<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858290"> 
+</a>Input<br>
+</td>
+<td colSpan=90 valign="top"><a name="X13858291"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858292"> 
+</a>GlobalData(DMA_Database[Index].Data) = Value<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858293"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET = FALSE<br><br>DML_PWRINT5S = TRUE<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858294"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = FALSE<br><br>DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET  = FALSE<br><br>DML_PWRINT5S = TRUE<br><br>DML_OPSW_CYCLE_COUNTER  = 0x77<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858302"> 
+</a>Output<br>
+</td>
+<td colSpan=90 valign="top"><a name="X13858303"> 
+</a>Index,Src<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858304"> 
+</a>StubNum =&#62; ValueWritten2DB(Index,Src)<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858305"> 
+</a>NA<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858306"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE)<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x77)<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858308"> 
+</a>Output<br>
+</td>
+<td colSpan=90 valign="top"><a name="X13858309"> 
+</a>Yes/No<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858310"> 
+</a>StubCalled(DOR_Reset_Power_Interrupt_Time_Detector()),<br><br>StubCalled(PUC_Delayed_Determine_Opmode()),<br><br>StubCalled(PUC_Delayed_Failure_Reactions())<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858311"> 
+</a>No,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858312"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+</tr>
+<tr>
+<td colSpan=90 valign="top"><a name="X13858314"> 
+</a>Output<br>
+</td>
+<td colSpan=90 valign="top"><a name="X13858315"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=250 valign="top"><a name="X13858316"> 
+</a>StubNum =&#62; StubCalled(DME_Set_With_NVM(Index, Value))<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858317"> 
+</a>1=&#62; ( DML_COUP_COUP, 4 )<br>2=&#62;(DML_PUT_FINISHED, FALSE)<br>
+</td>
+<td colSpan=260 valign="top"><a name="X13858318"> 
+</a>1=&#62; ( DML_COUP_COUP, 3 )<br>2=&#62;( DML_PUT_FINISHED, TRUE)<br>
+</td>
+</tr>
+</table>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13320326"> 
+</a>FCP_AB_STH_Run_Startup_Test_3<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><b>[MTS_OPSW_P1-IVVP-5517]</b></td>
+<td>SDD_OPSW-CI-1113;SDD_OPSW-CI-2651;SDD_OPSW-CI-2652;SDD_OPSW-CI-1114;SDD_OPSW-CI-2656;SDD_OPSW-CI-3509</td>
+<td><a name="X13320320"> 
+</a>1113:&#60;1&#62;;<br>2651:&#60;1&#62;,&#60;2&#62;;<br>2652:&#60;2c&#62;;<br>1114:&#60;3&#62;,&#60;d&#62;;<br>2656;<br>3509:&#60;2&#62;<br><br><b>Test Objectives:</b><br>This MTS verifies the actions in case of rapid switching-on as follows:<br><br>1) If internal variable Run_Put is TRUE, then call PUT_Handle() function and set Stop_PUT to its return value, and (Behavior &#60;1&#62; and &#60;2&#62; of 2651)<br>
+<DIV style="margin-left: 36px">1.1)&nbsp;&nbsp;&nbsp;&#9;When Stop_PUT is TRUE, use DMA_Set()  to set DB entries DML_PWRUPCOMPLETED to TRUE and DML_PWRUPCOMPLETED_SET_AT_CYCLE with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database and call function DOR_Reset_Power_Interrupt_Time_Detector().<br>1.2)&nbsp;&nbsp;&nbsp;&#9;When Stop_PUT is FALSE, then none of the functions mentioned in point 1.1 is not called.<br><br>
+</DIV>2) If internal variable Run_Put is FALSE then perform the following(Behavior &#60;2&#62; of 2651 and Behavior &#60;1&#62; of 1113)<br><br>2.1) If conditions are invalid (i.e DB entry DML_PWRINTGTTRANSLE200MS is FALSE) and  (i.e DB entry DML_MANUALRESETTEST is FALSE) and<br><br>2.1.1) If DB entry DML_ACONGNDVAL is TRUE read using GlobalData DMA_Database , then: (Behavior &#60;2c&#62; of 2652 and (Behavior &#60;3&#62; of 1114)<br>&nbsp;&nbsp;&nbsp;&#9;- call function PUC_Delayed_Determine_Opmode(),<br>&nbsp;&nbsp;&nbsp;&#9;- call function PUC_Delayed_Failure_Reactions(),<br>2.1.2) Otherwise, don&#8217;t call the functions mentioned in point 2.1.1<br><br>2.2) If DB entry DML_PWRINT5S is FALSE and DML_MANUALRESET is FALSE and DML_HWRESET is FALSE read using GlobalData DMA_Database , then  perform any of the following: (Behavior &#60;d&#62; of 1114)<br><br>2.2.1) DML_PUT_FINISHED = FALSE AND DML_ACONGND = TRUE then,<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_COUP_COUP to 2 using DME_Set_With_NVM(), and<br>&nbsp;&nbsp;&nbsp;&#9;- set internal variable Run_Put to TRUE.<br>2.2.2) If  (DML_PUT_FINISHED = TRUE AND DML_ACONGND = TRUE)  then <br>
+<DIV style="margin-left: 36px">- write DB entry DML_COUP_COUP to 2 using DME_Set_With_NVM(),<br>- write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(),<br>- write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and<br>- call function DOR_Reset_Power_Interrupt_Time_Detector()<br>
+</DIV>2.2.3) If (DML_PUT_FINISHED = FALSE AND DML_ACONGND = FALSE) then <br>
+<DIV style="margin-left: 36px">- write DB entry DML_COUP_COUP to 2 using DME_Set_With_NVM(),<br>- write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(),<br>- write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and<br>- call function DOR_Reset_Power_Interrupt_Time_Detector()<br>
+</DIV>3) If DB entry DML_SECVOLTAGEMONRESETTEST is FALSE then perform the objectives 1 and 2(Behavior &#60;2&#62; of 3509)<br><br>Note: This MTS is common for both FCP_A and FCP_B mode.<br><br><b>Template Used:</b> Coupling Standard Test Procedure<br><br><b>Coupling Tables:</b> Refer table &#8220;FCP_AB_STH_Run_Startup_Test_4a and FCP_AB_STH_Run_Startup_Test_4b&#8221; for inputs and outputs.<br><br><b>PreCondition/Setup:</b> CallOfFunction(STH_Initialise()) in all test except test cases 3 and 4.<br><br><b>Input Stimulation: </b><br>1) Provide the input using standard input methods as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_4a and FCP_AB_STH_Run_Startup_Test_4b&#8221;.<br>2) Inputs for database entries are exercised for ranges or data type as mentioned in data dictionary.<br>3) DB entry DML_SECVOLTAGEMONRESETTEST is FALSE in all the test cases.<br><br><b>Transfer Action: </b>CallOfFunction(STH_Run_Startup())<br><br><b>Output Verification: </b><br>1) Outputs Index and Src are verified using standard output method &#8220;ValueWritten2DB&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_4a and FCP_AB_STH_Run_Startup_Test_4b&#8221;.<br>2) Function calls DOR_Reset_Power_Interrupt_Time_Detector, PUC_Delayed_Determine_Opmode and PUC_Delayed_Failure_Reactions are verified using standard output method &#8220;StubCalled&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_4a and FCP_AB_STH_Run_Startup_Test_4b&#8221;.<br>3) Outputs Index and Value are verified using standard output method &#8220;StubCalled(DME_Set_With_NVM(Index, Value))&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_4a and FCP_AB_STH_Run_Startup_Test_4b&#8221;.<br>4) Verify following function call in all test cases except test cases 3 and 4 ValueWritten2DB(DML_PWRUPCOMPLETED, FALSE).<br><br>
+</td>
+<td>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002444 [KP]: Specification Revalidation OK<br><br>1816PR002444 [KP]: Script Revalidation OK</td>
+<td><br></td>
+<td>Passed</td>
+<td><br></td>
+<td>opsw\source\os_service\fcp_ab\sth_startup_handler.ptu</td>
+<td>7</td>
+<td>1816PR002428;1816PR002444</td>
+<td>OPSW_DEVELOP_5_25</td>
+<td>PD1000006058_SDD_OPSW_A350_SFCC current 10.3</td>
+<td>Review</td>
+<td>Checklist CL_Val_MT_Spec (SPEG);Checklist CL_Val_MT_Script (SPEG)</td>
+<td>Accepted</td>
+<td>Integrated</td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13858319"> 
+</a><table border = 1 cellPadding = 0 cellSpacing = 0>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858321"> 
+</a>Typ<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858322"> 
+</a>Name<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858323"> 
+</a>Method/TestCase<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858324"> 
+</a>1<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858325"> 
+</a>2<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858326"> 
+</a>3<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858328"> 
+</a>Test Objectives<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858329"> 
+</a>NA<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858330"> 
+</a>NA<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858331"> 
+</a>2,2.1,2.1.1,2.2,2.2.2,3<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858332"> 
+</a>2,2.1, 2.1.1,2.2,2.2.1,3<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858333"> 
+</a>1,1.1,3<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858335"> 
+</a>Test Case <br>Description<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858336"> 
+</a>NA<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858337"> 
+</a>NA<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858338"> 
+</a>DML_PUT_FINISHED = TRUE<br>AND<br>DML_ACONGND = TRUE<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858339"> 
+</a>DML_PUT_FINISHED = FALSE<br>AND<br>DML_ACONGND = TRUE<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858340"> 
+</a>Stop_PUT is TRUE<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858342"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858343"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858344"> 
+</a>GlobalData(DMA_Database[Index].Data) = Value<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858345"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND  = TRUE<br><br>DML_ACONGNDVAL = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET = FALSE<br><br>DML_PWRINT5S = FALSE<br><br>DML_PUT_FINISHED = TRUE<br><br>DML_OPSW_CYCLE_COUNTER  = 0x88<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858346"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND  = TRUE<br><br>DML_ACONGNDVAL= TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET  = FALSE<br><br>DML_PWRINT5S = FALSE<br><br>DML_PUT_FINISHED = FALSE<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858347"> 
+</a>DML_OPSW_CYCLE_COUNTER  = 0x88<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858349"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858350"> 
+</a>Stop_PUT<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858351"> 
+</a>[Value@Address(Stop_PUT,1),StubReturn(PUT_Handle(Stop_PUT))]<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858352"> 
+</a>NA<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858353"> 
+</a>NA<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858354"> 
+</a>TRUE<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858356"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858357"> 
+</a>Index,Src<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858358"> 
+</a>StubNum =&#62; ValueWritten2DB(Index,Src)<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858359"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE)<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x88)<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858360"> 
+</a>NA<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858361"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE )<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x88)<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858363"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858364"> 
+</a>Yes/No<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858365"> 
+</a>StubCalled(DOR_Reset_Power_Interrupt_Time_Detector()),<br><br>StubCalled(PUC_Delayed_Determine_Opmode()),<br><br>StubCalled(PUC_Delayed_Failure_Reactions())<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858366"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858367"> 
+</a>No,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858368"> 
+</a>Yes,<br>No,<br>No<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858370"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858371"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858372"> 
+</a>StubNum =&#62; StubCalled(DME_Set_With_NVM(Index, Value))<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858373"> 
+</a>1=&#62; ( DML_COUP_COUP, 2 )<br><br>2=&#62;( DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858374"> 
+</a>1=&#62; ( DML_COUP_COUP, 2 )<br>
+</td>
+<td colSpan=340 valign="top"><a name="X13858375"> 
+</a>NA<br>
+</td>
+</tr>
+</table>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13322861"> 
+</a>FCP_AB_STH_Run_Startup_Test_4a<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13858376"> 
+</a><table border = 1 cellPadding = 0 cellSpacing = 0>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858378"> 
+</a>Typ<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858379"> 
+</a>Name<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858380"> 
+</a>Method/TestCase<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858381"> 
+</a>4<br>
+</td>
+<td colSpan=360 valign="top"><a name="X13858382"> 
+</a>5<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858383"> 
+</a>6<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858385"> 
+</a>Test Objectives<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858386"> 
+</a>NA<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858387"> 
+</a>NA<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858388"> 
+</a>1,1.2,3<br>
+</td>
+<td colSpan=360 valign="top"><a name="X13858389"> 
+</a>2,2.1, 2.1.1,2.2,2.2.3,3<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858390"> 
+</a>2,2.1, 2.1.2,3<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858392"> 
+</a>Test Case <br>Description<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858393"> 
+</a>NA<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858394"> 
+</a>NA<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858395"> 
+</a>Stop_PUT is FALSE<br>
+</td>
+<td colSpan=360 valign="top"><a name="X13858396"> 
+</a>DML_PUT_FINISHED = FALSE AND DML_ACONGND = FALSE<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858397"> 
+</a>DML_ACONGNDVAL is FALSE<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858399"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858400"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858401"> 
+</a>GlobalData(DMA_Database[Index].Data) = Value<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858402"> 
+</a>NA<br>
+</td>
+<td colSpan=360 valign="top"><a name="X13858403"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = FALSE<br><br>DML_ACONGNDVAL  = TRUE<br><br>DML_MANUALRESET = FALSE<br><br>DML_HWRESET  = FALSE<br><br>DML_PWRINT5S = FALSE<br><br>DML_PUT_FINISHED = FALSE<br><br>DML_OPSW_CYCLE_COUNTER  = 0x99<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858404"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = FALSE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL = FALSE<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858406"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858407"> 
+</a>Stop_PUT<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858408"> 
+</a>[Value@Address(Stop_PUT,1),StubReturn(PUT_Handle(Stop_PUT))]<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858409"> 
+</a>FALSE<br>
+</td>
+<td colSpan=360 valign="top"><a name="X13858410"> 
+</a>NA<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858411"> 
+</a>NA<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858413"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858414"> 
+</a>Index,Src<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858415"> 
+</a>StubNum =&#62; ValueWritten2DB(Index,Src)<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858416"> 
+</a>NA<br>
+</td>
+<td colSpan=360 valign="top"><a name="X13858417"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE)<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x99)<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858418"> 
+</a>NA<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858420"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858421"> 
+</a>Yes/No<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858422"> 
+</a>StubCalled(DOR_Reset_Power_Interrupt_Time_Detector()),<br><br>StubCalled(PUC_Delayed_Determine_Opmode()),<br><br>StubCalled(PUC_Delayed_Failure_Reactions())<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858423"> 
+</a>No,<br>No,<br>No<br>
+</td>
+<td colSpan=360 valign="top"><a name="X13858424"> 
+</a>Yes,<br>Yes,<br>Yes<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858425"> 
+</a>No,<br>No,<br>No<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858427"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858428"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858429"> 
+</a>StubNum =&#62; StubCalled(DME_Set_With_NVM(Index, Value))<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858430"> 
+</a>NA<br>
+</td>
+<td colSpan=360 valign="top"><a name="X13858431"> 
+</a>1=&#62; ( DML_COUP_COUP, 2 ) <br><br>2=&#62;( DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=280 valign="top"><a name="X13858432"> 
+</a>NA<br>
+</td>
+</tr>
+</table>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13320328"> 
+</a>FCP_AB_STH_Run_Startup_Test_4b<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><b>[MTS_OPSW_P1-IVVP-5518]</b></td>
+<td>SDD_OPSW-CI-1113;SDD_OPSW-CI-2651;SDD_OPSW-CI-2652</td>
+<td><a name="X13320329"> 
+</a>1113:&#60;1&#62;;<br>2651:&#60;2&#62;;<br>2652:&#60;2b&#62;<br><br><b>Test Objectives:</b><br>1) If internal variable Run_Put is FALSE  then perform the following (Behavior &#60;2&#62; of 2651 and Behavior &#60;1&#62; of 1113)<br><br>2) If condition is invalid (i.e DB entry DML_PWRINTGTTRANSLE200MS is FALSE) (Behavior &#60;2b&#62; of 2652)<br><br>2.1)  DB entry DML_MANUALRESETTEST is TRUE and DB entry DML_MANUALRESET is FALSE, read using GlobalData DMA_Database , then:<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(),<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and<br>&nbsp;&nbsp;&nbsp;&#9;- call function DOR_Reset_Power_Interrupt_Time_Detector().<br><br>2.2) DB entry DML_MANUALRESETTEST is TRUE and DB entry DML_MANUALRESET is TRUE, read using GlobalData DMA_Database , then:<br>don&#8217;t call the functions mentioned in point 2.1<br><br>Note: This MTS is common for both FCP_A and FCP_B mode.<br><br><b>Template Used:</b> Coupling Standard Test Procedure<br><br><b>Coupling Tables:</b> Refer table &#8220;FCP_AB_STH_Run_Startup_Test_5a and FCP_AB_STH_Run_Startup_Test_5b&#8221; for inputs and outputs.<br><br><b>PreCondition/Setup:</b> CallOfFunction(STH_Initialise()) in all test .<br><br><b>Input Stimulation: </b><br>1) Provide the input using standard input methods as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_5a and FCP_AB_STH_Run_Startup_Test_5b&#8221;.<br>2) Inputs for database entries are exercised for ranges or data type as mentioned in data dictionary.<br><br><b>Transfer Action: </b>CallOfFunction(STH_Run_Startup())<br><br><b>Output Verification: </b><br>1) Outputs Index and Src are verified using standard output method &#8220;ValueWritten2DB&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_5a and FCP_AB_STH_Run_Startup_Test_5b&#8221;.<br>2) Function calls DOR_Reset_Power_Interrupt_Time_Detector, PUC_Delayed_Determine_Opmode and PUC_Delayed_Failure_Reactions are verified using standard output method &#8220;StubCalled&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_5a and FCP_AB_STH_Run_Startup_Test_5b&#8221;.<br>3) Outputs Index and Value are verified using standard output method &#8220;StubCalled(DME_Set_With_NVM(Index, Value))&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_5a and FCP_AB_STH_Run_Startup_Test_5b&#8221;.<br>4) Verify following function call in all test cases ValueWritten2DB(DML_PWRUPCOMPLETED, FALSE).<br>
+</td>
+<td>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002428 [PK]: Specification Revalidation OK<br><br>1816PR002428 [PK]: Script Revalidation OK<br><br>1816PR002444 [KP]: Specification Revalidation OK<br><br>1816PR002444 [KP]: Script Revalidation OK</td>
+<td><br></td>
+<td>Passed</td>
+<td><br></td>
+<td>opsw\source\os_service\fcp_ab\sth_startup_handler.ptu</td>
+<td>7</td>
+<td>1816PR002428;1816PR002444</td>
+<td>OPSW_DEVELOP_5_25</td>
+<td>PD1000006058_SDD_OPSW_A350_SFCC current 10.3</td>
+<td>Review</td>
+<td>Checklist CL_Val_MT_Spec (SPEG);Checklist CL_Val_MT_Script (SPEG)</td>
+<td>Accepted</td>
+<td>Integrated</td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13858433"> 
+</a><table border = 1 cellPadding = 0 cellSpacing = 0>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858435"> 
+</a>Typ<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858436"> 
+</a>Name<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858437"> 
+</a>Method/TestCase<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858438"> 
+</a>1<br>
+</td>
+<td colSpan=270 valign="top"><a name="X13858439"> 
+</a>2<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858440"> 
+</a>3<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858442"> 
+</a>Test Objectives<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858443"> 
+</a>NA<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858444"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858445"> 
+</a>1,2,2.1<br>
+</td>
+<td colSpan=270 valign="top"><a name="X13858446"> 
+</a>1,2,2.2<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858447"> 
+</a>1,2,2.1<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858449"> 
+</a>Test Case <br>Description<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858450"> 
+</a>NA<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858451"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858452"> 
+</a>DML_MANUALRESETTEST = TRUE and DML_MANUALRESET = FALSE<br>DML_OPSW_CYCLE_COUNTER = 0<br>
+</td>
+<td colSpan=270 valign="top"><a name="X13858453"> 
+</a>DML_MANUALRESETTEST = TRUE  <br>DML_MANUALRESET = TRUE<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858454"> 
+</a>DML_MANUALRESETTEST = TRUE and DML_MANUALRESET = FALSE<br>DML_OPSW_CYCLE_COUNTER = 1650<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858456"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858457"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858458"> 
+</a>GlobalData(DMA_Database[Index].Data) = Value<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858459"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = TRUE<br>  <br>DML_MANUALRESET = FALSE <br><br>DML_OPSW_CYCLE_COUNTER  = 0x99<br>
+</td>
+<td colSpan=270 valign="top"><a name="X13858460"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = TRUE<br><br>DML_MANUALRESET = TRUE<br><br>DML_ACONGND = TRUE<br><br>DML_ACONGNDVAL  = FALSE<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858461"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = TRUE<br>  <br>DML_MANUALRESET = FALSE <br><br>DML_OPSW_CYCLE_COUNTER = 1650<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858463"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858464"> 
+</a>Stop_PUT<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858465"> 
+</a>[Value@Address(Stop_PUT,1),StubReturn(PUT_Handle(Stop_PUT))]<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858466"> 
+</a>NA<br>
+</td>
+<td colSpan=270 valign="top"><a name="X13858467"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858468"> 
+</a>NA<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858470"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858471"> 
+</a>Index,Src<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858472"> 
+</a>StubNum =&#62; ValueWritten2DB(Index,Src)<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858473"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE )<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0x99)<br>
+</td>
+<td colSpan=270 valign="top"><a name="X13858474"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858475"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE )<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 1650)<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858477"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858478"> 
+</a>Yes/No<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858479"> 
+</a>StubCalled(DOR_Reset_Power_Interrupt_Time_Detector()),<br><br>StubCalled(PUC_Delayed_Determine_Opmode()),<br><br>StubCalled(PUC_Delayed_Failure_Reactions())<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858480"> 
+</a>Yes,<br>No,<br>No<br>
+</td>
+<td colSpan=270 valign="top"><a name="X13858481"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858482"> 
+</a>Yes,<br>No,<br>No<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858484"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858485"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858486"> 
+</a>StubNum =&#62; StubCalled(DME_Set_With_NVM(Index, Value))<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858487"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=270 valign="top"><a name="X13858488"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858489"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+</tr>
+</table>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13320331"> 
+</a><br>FCP_AB_STH_Run_Startup_Test_5a<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13858490"> 
+</a><table border = 1 cellPadding = 0 cellSpacing = 0>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858492"> 
+</a>Typ<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858493"> 
+</a>Name<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858494"> 
+</a>Method/TestCase<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858495"> 
+</a>4<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858496"> 
+</a>5<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858497"> 
+</a>6<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858499"> 
+</a>Test Objectives<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858500"> 
+</a>NA<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858501"> 
+</a>NA<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858502"> 
+</a>1,2,2.1<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858503"> 
+</a>1,2,2.1<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858504"> 
+</a>1,2,2.1<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858506"> 
+</a>Test Case <br>Description<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858507"> 
+</a>NA<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858508"> 
+</a>NA<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858509"> 
+</a>DML_MANUALRESETTEST = TRUE and DML_MANUALRESET = FALSE<br>DML_OPSW_CYCLE_COUNTER = 500<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858510"> 
+</a>DML_MANUALRESETTEST = TRUE and DML_MANUALRESET = FALSE<br>DML_OPSW_CYCLE_COUNTER = 1651<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858511"> 
+</a>DML_MANUALRESETTEST = TRUE and DML_MANUALRESET = FALSE<br>DML_OPSW_CYCLE_COUNTER = 2253<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858513"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858514"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858515"> 
+</a>GlobalData(DMA_Database[Index].Data) = Value<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858516"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = TRUE<br>  <br>DML_MANUALRESET = FALSE <br><br>DML_OPSW_CYCLE_COUNTER  = 500<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858517"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = TRUE<br>  <br>DML_MANUALRESET = FALSE <br><br>DML_OPSW_CYCLE_COUNTER  = 1651<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858518"> 
+</a>DML_PWRINTGTTRANSLE200MS = FALSE<br><br>DML_MANUALRESETTEST = TRUE<br>  <br>DML_MANUALRESET = FALSE <br><br>DML_OPSW_CYCLE_COUNTER = 2253<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858520"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858521"> 
+</a>Stop_PUT<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858522"> 
+</a>[Value@Address(Stop_PUT,1),StubReturn(PUT_Handle(Stop_PUT))]<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858523"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858524"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858525"> 
+</a>NA<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858527"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858528"> 
+</a>Index,Src<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858529"> 
+</a>StubNum =&#62; ValueWritten2DB(Index,Src)<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858530"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE )<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 500)<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858531"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE )<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 1651)<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858532"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE )<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 2253)<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858534"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858535"> 
+</a>Yes/No<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858536"> 
+</a>StubCalled(DOR_Reset_Power_Interrupt_Time_Detector()),<br><br>StubCalled(PUC_Delayed_Determine_Opmode()),<br><br>StubCalled(PUC_Delayed_Failure_Reactions())<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858537"> 
+</a>Yes,<br>No,<br>No<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858538"> 
+</a>Yes,<br>No,<br>No<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858539"> 
+</a>Yes,<br>No,<br>No<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X13858541"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X13858542"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=410 valign="top"><a name="X13858543"> 
+</a>StubNum =&#62; StubCalled(DME_Set_With_NVM(Index, Value))<br>
+</td>
+<td colSpan=330 valign="top"><a name="X13858544"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858545"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=350 valign="top"><a name="X13858546"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+</tr>
+</table>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X13323398"> 
+</a>FCP_AB_STH_Run_Startup_Test_5b<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><b>[MTS_OPSW_P1-IVVP-6207]</b></td>
+<td>SDD_OPSW-CI-3509</td>
+<td><a name="X14052389"> 
+</a>3509:&#60;1&#62;,&#60;1.1&#62;,&#60;1.1.1&#62;,&#60;1.1.2&#62;,&#60;1.1.3&#62;,&#60;1.2&#62;,&#60;1.3&#62;<br><br>This MTS is dependent on the behavior&#60;2c&#62; of SDD_OPSW-CI-2652 and &#60;2&#62; of SDD_OPSW-CI-2651<br><br><b>Test Objectives:</b><br>1) If internal variable Run_Put is FALSE(Behavior &#60;2&#62; of 2651 and Behavior &#60;2&#62; of 2651) <br>1.1)<b> </b>If conditions are invalid (i.e DB entry DML_PWRINTGTTRANSLE200MS is FALSE ) and  (i.e DB entry DML_MANUALRESETTEST is FALSE or  DB entry DML_MANUALRESET is TRUE)<b>.</b>(Behavior &#60;2c&#62; of SDD_OPSW-CI-2652)<br>1.1.1)If DB entry DML_SECVOLTAGEMONRESETTEST is TRUE and DB entry DML_PUT_FINISHED is TRUE, read using GlobalData DMA_Database , then: following (Behavior &#60;1&#62; of 3509 and Behavior &#60;1.1&#62; of 3509)<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PUT_FINISHED to TRUE using DME_Set_With_NVM(),(Behavior &#60;1.1.1&#62; of 3509)<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED to TRUE using DMA_Set(),(Behavior &#60;1.1.2&#62; of 3509)<br>&nbsp;&nbsp;&nbsp;&#9;- write DB entry DML_PWRUPCOMPLETED_SET_AT_CYCLE using DMA_Set() with the value from DB entry DML_OPSW_CYCLE_COUNTER read using GlobalData DMA_Database , and(Behavior &#60;1.1.3&#62; of 3509)<br>&nbsp;&nbsp;&nbsp;&#9;- call function DOR_Reset_Power_Interrupt_Time_Detector().(Behavior &#60;1.2&#62; of 3509)<br>&nbsp;&nbsp;&nbsp;&#9;- call function AST_Resume_Safety_Tests().(Behavior &#60;1.3&#62; of 3509)<br><br>1.1.2)If DB entry DML_SECVOLTAGEMONRESETTEST is TRUE and DB entry DML_MANUALRESET is FALSE, read using GlobalData DMA_Database , then: (Behavior &#60;1&#62; of 3509 and Behavior &#60;1.1&#62; of 3509)<br>&nbsp;&nbsp;&nbsp;&#9;- call function DOR_Reset_Power_Interrupt_Time_Detector().(Behavior &#60;1.2&#62; of 3509)<br>&nbsp;&nbsp;&nbsp;&#9;- call function AST_Resume_Safety_Tests().(Behavior &#60;1.3&#62; of 3509)<br><br>Note: This MTS is common for both FCP_A and FCP_B mode.<br><br><b>Template Used:</b> Coupling Standard Test Procedure<br><br><b>Coupling Tables:</b> Refer table &#8220;FCP_AB_STH_Run_Startup_Test_6&#8221; for inputs and outputs.<br><br><b>PreCondition/Setup:</b> CallOfFunction(STH_Initialise()) in all test .<br><br><b>Input Stimulation: </b><br>1) Provide the input using standard input methods as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_6&#8221;.<br>2) Inputs for database entries are exercised for ranges or data type as mentioned in data dictionary.<br>3) internal variable Run_Put, DB entries DML_PWRINTGTTRANSLE200MS, DML_MANUALRESETTEST and DML_MANUALRESET are FALSE in all the test cases<br><b>Transfer Action: </b>CallOfFunction(STH_Run_Startup())<br><br><b>Output Verification: </b><br>1) Outputs Index and Src are verified using standard output method &#8220;ValueWritten2DB&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_6&#8221;.<br>2) Function calls DOR_Reset_Power_Interrupt_Time_Detector, AST_Resume_Safety_Tests are verified using standard output method &#8220;StubCalled&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_6&#8221;.<br>3) Outputs Index and Value are verified using standard output method &#8220;StubCalled(DME_Set_With_NVM(Index, Value))&#8221; as specified in table &#8220;FCP_AB_STH_Run_Startup_Test_6&#8221;.<br>4) Verify following function call in all test cases ValueWritten2DB(DML_PWRUPCOMPLETED, FALSE).<br>
+</td>
+<td>1816PR002444 [KP]: Specification Revalidation OK<br><br>1816PR002444 [KP]: Script Revalidation OK</td>
+<td><br></td>
+<td>Passed</td>
+<td><br></td>
+<td>opsw\source\os_service\fcp_ab\sth_startup_handler.ptu</td>
+<td>7</td>
+<td>1816PR002444</td>
+<td>OPSW_DEVELOP_5_25</td>
+<td>PD1000006058_SDD_OPSW_A350_SFCC current 10.3</td>
+<td>Review</td>
+<td>Checklist CL_Val_MT_Spec (SPEG);Checklist CL_Val_MT_Script (SPEG)</td>
+<td>Accepted</td>
+<td>Integrated</td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X14052391"> 
+</a><table border = 1 cellPadding = 0 cellSpacing = 0>
+<tr>
+<td colSpan=150 valign="top"><a name="X14052393"> 
+</a>Typ<br>
+</td>
+<td colSpan=150 valign="top"><a name="X14052394"> 
+</a>Name<br>
+</td>
+<td colSpan=350 valign="top"><a name="X14052395"> 
+</a>Method/TestCase<br>
+</td>
+<td colSpan=250 valign="top"><a name="X14052396"> 
+</a>1<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052397"> 
+</a>2<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052398"> 
+</a>3<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052399"> 
+</a>4<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X14052401"> 
+</a>Test Objectives<br>
+</td>
+<td colSpan=150 valign="top"><a name="X14052402"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X14052403"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X14052404"> 
+</a>1,1.1,1.1.2<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052405"> 
+</a>1,1.1,1.1.1<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052406"> 
+</a>1,1.1,1.1.1<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052407"> 
+</a>1,1.1,1.1.1<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X14052409"> 
+</a>Test Case <br>Description<br>
+</td>
+<td colSpan=150 valign="top"><a name="X14052410"> 
+</a>NA<br>
+</td>
+<td colSpan=350 valign="top"><a name="X14052411"> 
+</a>NA<br>
+</td>
+<td colSpan=250 valign="top"><a name="X14052412"> 
+</a>DML_SECVOLTAGEMONRESETTEST = TRUE and DML_PUT_FINISHED = FALSE<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052413"> 
+</a>DDML_SECVOLTAGEMONRESETTEST = TRUE and DML_PUT_FINISHED = TRUE<br>DML_OPSW_CYCLE_COUNTER is maximum<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052414"> 
+</a>DDML_SECVOLTAGEMONRESETTEST = TRUE and DML_PUT_FINISHED = TRUE<br>DML_OPSW_CYCLE_COUNTER is minimum<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052415"> 
+</a>DDML_SECVOLTAGEMONRESETTEST = TRUE and DML_PUT_FINISHED = TRUE<br>DML_OPSW_CYCLE_COUNTER is nominal<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X14052417"> 
+</a>Input<br>
+</td>
+<td colSpan=150 valign="top"><a name="X14052418"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=350 valign="top"><a name="X14052419"> 
+</a>GlobalData(DMA_Database[Index].Data) = Value<br>
+</td>
+<td colSpan=250 valign="top"><a name="X14052420"> 
+</a>DML_SECVOLTAGEMONRESETTEST = TRUE<br><br>DML_PUT_FINISHED = FALSE<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052421"> 
+</a>DML_SECVOLTAGEMONRESETTEST = TRUE<br><br>DML_PUT_FINISHED = TRUE<br><br>DML_OPSW_CYCLE_COUNTER = 0xFFFFFFFF<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052422"> 
+</a>DML_SECVOLTAGEMONRESETTEST = TRUE<br><br>DML_PUT_FINISHED = TRUE<br><br>DML_OPSW_CYCLE_COUNTER = 0<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052423"> 
+</a>DML_SECVOLTAGEMONRESETTEST = TRUE<br><br>DML_PUT_FINISHED = TRUE<br><br>DML_OPSW_CYCLE_COUNTER = 25<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X14052425"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X14052426"> 
+</a>Index,Src<br>
+</td>
+<td colSpan=350 valign="top"><a name="X14052427"> 
+</a>StubNum =&#62; ValueWritten2DB(Index,Src)<br>
+</td>
+<td colSpan=250 valign="top"><a name="X14052428"> 
+</a>NA<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052429"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE )<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0xFFFFFFFF)<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052430"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE )<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 0)<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052431"> 
+</a>1=&#62;( DML_PWRUPCOMPLETED, TRUE )<br><br>2=&#62;( DML_PWRUPCOMPLETED_SET_AT_CYCLE, 25)<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X14052433"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X14052434"> 
+</a>Yes/No<br>
+</td>
+<td colSpan=350 valign="top"><a name="X14052435"> 
+</a>StubCalled(DOR_Reset_Power_Interrupt_Time_Detector()),<br><br>StubCalled(AST_Resume_Safety_Tests()),<br>
+</td>
+<td colSpan=250 valign="top"><a name="X14052436"> 
+</a>Yes,<br>Yes<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052437"> 
+</a>Yes,<br>Yes<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052438"> 
+</a>Yes,<br>Yes<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052439"> 
+</a>Yes,<br>Yes<br>
+</td>
+</tr>
+<tr>
+<td colSpan=150 valign="top"><a name="X14052441"> 
+</a>Output<br>
+</td>
+<td colSpan=150 valign="top"><a name="X14052442"> 
+</a>Index, Value<br>
+</td>
+<td colSpan=350 valign="top"><a name="X14052443"> 
+</a>StubNum =&#62; StubCalled(DME_Set_With_NVM(Index, Value))<br>
+</td>
+<td colSpan=250 valign="top"><a name="X14052444"> 
+</a>NA<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052445"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052446"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+<td colSpan=300 valign="top"><a name="X14052447"> 
+</a>1=&#62;(DML_PUT_FINISHED, TRUE)<br>
+</td>
+</tr>
+</table>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+<tr><td><br></td>
+<td><br></td>
+<td><a name="X14052390"> 
+</a>FCP_AB_STH_Run_Startup_Test_6<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td nowrap align="left"><small>...</small></td>
+</tr>
+</table>
+<DIV align="center"><p><a href = "http://www.telelogic.com/doors/">Produced by DOORS 8.3.0.1</a></DIV>
+</body>
+</html>
